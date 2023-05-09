@@ -8,7 +8,6 @@
     --backgroundMenu:#96d4c980;
     --colorFontMenu:#4C8F8A;
 }
-
 *{
     margin: 0;
     padding: 0;
@@ -30,6 +29,16 @@ body{
     height: 100vh;
     background-color: var(--background1);
 }
+
+.container{
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+
+    padding: 60px 30px 30px 20px;
+    position: relative;
+}
+
 /* Header Menu de navegação principal */
 header.menu-principal{
     width: 100%;
@@ -60,8 +69,6 @@ header.menu-principal ul.lista-menu li a{
 header.menu-principal ul.lista-menu li a:hover{
     color: #155D63;
 }
-
-
 section{
     height: 100vh;
     width: 100%;
@@ -71,13 +78,7 @@ section{
     display: grid;
     background-color: var(--background1);
 }
-.container{
-    width: 100%;
-    max-width: 1440px;
-    height: 100vh;
 
-    padding: 60px 30px 30px 20px;
-}
 /* Sessao de introdução do site */
 section.introducao{
     width: 100%;  
@@ -86,7 +87,10 @@ section.introducao{
     grid-template-areas: 'info img';
     grid-template-columns: 40% 60%;
     gap: 10px;
-    padding: 30px;
+    padding: 10px;
+}
+.introducao .intro-info h1{
+    padding: 5px;
 }
 .introducao .intro-info h1,
 .introducao .intro-info h1 span{ 
@@ -104,9 +108,11 @@ section.introducao{
     font-size: 1.2rem;
     margin-top: 20px;
     color: rgb(65, 65, 65);
+    padding: 5px;
 }
 .introducao .intro-info a{
     margin-top: 40px;
+    margin-left: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,4 +152,93 @@ section.introducao{
     top: -120px;
     object-fit: cover;
 }
+
+/* Sessao resumo */
+
+section.resumo{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    'titulo titulo'
+    'imgresumo textoresumo'
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 85%;
+    padding: 20px;
+    gap: 10px;
+}
+
+
+ h1.titulo-sessao{
+    grid-area: titulo;
+    display: inline-flex;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.6rem;
+    align-items: center;
+    color: #0b4d53;
+}
+h1.titulo-sessao::after{
+    content: '';
+    width: 60px;
+    height: 5px;
+    background: var(--colorFontMenu);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.resumo .img-resumo{
+    grid-area: imgresumo;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    position: relative;
+}
+.resumo .img-resumo .img-container{
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    background-color: #4C8F8A;
+    position: absolute;
+    top: 15%;
+}
+.resumo .img-resumo .img-container:nth-child(1){
+    background-color: #0b4d53;
+}
+.resumo .img-resumo .img-container:nth-child(2){
+    left: 35%;
+    top: 35%;
+}
+.resumo .texto-resumo{
+    grid-area: textoresumo;
+
+    padding: 60px 0 0 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.resumo .texto-resumo h2{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.resumo .texto-resumo p{
+    padding: 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 70%;
+    font-size: 1rem;
+}
+/* Sessão Serviços */
 
