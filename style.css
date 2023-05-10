@@ -29,7 +29,9 @@ body{
     height: 100vh;
     background-color: var(--background1);
 }
-
+a{
+    text-decoration: none;
+}
 .container{
     width: 100%;
     max-width: 1440px;
@@ -44,7 +46,7 @@ header.menu-principal{
     width: 100%;
     height: 60px;
     position: fixed;
-    padding-left: 35px;
+    padding-left: 0;
     z-index: 10;
     top: 0;
     left: 0;
@@ -73,7 +75,8 @@ section{
     height: 100vh;
     width: 100%;
     padding: 10px;
-    margin-top: 20px;
+
+    margin-top: 10px;
     overflow: hidden;
     display: grid;
     background-color: var(--background1);
@@ -169,7 +172,6 @@ section.resumo{
     gap: 10px;
 }
 
-
  h1.titulo-sessao{
     grid-area: titulo;
     display: inline-flex;
@@ -190,7 +192,6 @@ h1.titulo-sessao::after{
     left: 0;
     z-index: 5;
 }
-
 .resumo .img-resumo{
     grid-area: imgresumo;
     display: flex;
@@ -240,5 +241,241 @@ h1.titulo-sessao::after{
     width: 70%;
     font-size: 1rem;
 }
+
 /* Sessão Serviços */
+.servicos{
+    /* background-color: violet; */
+    padding: 15px;
+    display: grid;
+    grid-template-areas: 
+    'titulo'
+    'carousel';
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 85%;
+    gap: 10px;
+}
+.servicos .titulo-sessao{
+    grid-area: titulo;
+}
+.servicos .carrossel{
+    grid-area: carousel;
+    /* background-color: yellowgreen; */
+    padding: 10px;
+}
+.servicos .carrossel ul{
+    width: 100%;
+    height: 100%;
+}
+/* SWIPER JS - CONTAINER SLIDE */
+.swiper{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    gap: 5px;
+    grid-area: carousel;
+}
+/* Slide */
+.swiper-slide{
+    margin-right: 2px;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Marca pagina slide */
+.swiper-pagination-bullet{
+    width: 25px;
+    height: 10px;
+    border-radius: 25px;
+    background: var(--colorFontMenu);
+}
+/* Card do slide - detalhes dos procedimentos */
+.card-slide{
+    width: 80%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    border: solid 2px #155c6380;
+    box-shadow: -29px 27px 6px -1px #155c632b;
+    -webkit-box-shadow: -29px 27px 6px -1px #155c632b;
+    -moz-box-shadow: -29px 27px 6px -1px #155c632b;
+}
+.card-slide .img-card{
+    width: 100%;
+    height: 180px;
+    border-radius: 5px;
+    background-color: #155D63;
+}
+.card-slide h3{
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.card-slide p{
+    font-size: .8rem;
+    width: 100%;
+    height: 130px;
+}
+.card-slide a{
+    display: inline-flex;
+    text-decoration: none;
+    width: 100px;
+    height: 30px;
+    background:#155D63 ;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: auto;
+}
+
+/* Sessão Profissionais */
+.profissionais{
+    display: grid;
+    grid-template-areas: 
+    'titulo'
+    'card';
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 90%;
+    padding: 5px;
+    gap: 5px;
+}
+.profissionais .titulo-sessao{
+    grid-area: titulo;
+}
+.profissionais ul{
+    grid-area: card;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.profissionais ul li{
+    width: 380px;
+    height: 95%;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    border: solid 2px #155c6380;
+    display: grid;
+    grid-template-areas: 
+    'perfil'
+    'nome'
+    'profissao'
+    'resumo';
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 10% 5% 45%;
+
+    box-shadow: -29px 27px 6px -1px #155c632b;
+    -webkit-box-shadow: -29px 27px 6px -1px #155c632b;
+    -moz-box-shadow: -29px 27px 6px -1px #155c632b;
+}
+.profissionais ul li .img-perfil{
+    grid-area: perfil;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profissionais ul li .img-perfil .img-container{
+    width: 180px;
+    height: 180px;
+    border-radius: 10pc;
+    background: #155D63;
+}
+.profissionais ul li h2{
+    grid-area: nome;
+    font-size: 1.4rem;
+    width: 100%;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    color: #155D63;
+}
+.profissionais ul li small{
+    grid-area: profissao;
+    width: 100;
+    text-align: center;
+    font-size: .8rem;
+    margin-top: -10px;
+    text-transform: capitalize;
+}
+.profissionais ul li p{
+    grid-area: resumo;
+    font-size: .8rem;
+    width: 80%;
+    margin: auto;
+    color: grey;
+}
+
+/* Sessão contato */
+.contato{
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    grid-template-areas:
+    'titulo titulo'
+    'form map';
+
+}
+.contato .titulo-sessao{
+    grid-area: titulo;
+}
+.contato form{
+    grid-area: form;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: #4C8F8A;
+    border-radius: 15px;
+}
+.contato form .row-form{
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.contato form .row-form label{
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.contato form .row-form label input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+.contato form .row-form label input[type='text']{
+    text-transform: capitalize;
+}
+
+
+
+.contato div{
+    grid-area: map;
+}
+.contato div iframe{
+    border-radius: 10px;
+    width: 400px;
+    height: 300px;
+}
+
+
 
