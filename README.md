@@ -1,3 +1,3 @@
-# studiocidadesigner
+# Studio Cida Designer
 
-Link teste:
+Link teste: https://cloves-neto.github.io/studiocidadesigner/
