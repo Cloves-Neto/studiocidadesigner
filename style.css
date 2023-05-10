@@ -478,4 +478,28 @@ h1.titulo-sessao::after{
 }
 
 
-
+footer{
+    left: 0;
+    top: 3200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 200px;
+    background: #0b4d53;
+}
+footer small{
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+}
+footer small,
+footer small a{
+    font-size: .8rem;
+    color: #4C8F8A;
+    text-transform: capitalize;
+}
