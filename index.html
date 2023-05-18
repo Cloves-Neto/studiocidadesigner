@@ -23,11 +23,13 @@
             <nav class="navegacao-menu">
                 <ul aria-label="lista de acesso dos lnks do menu de navegação principal" class="lista-menu">
                     <li class="item-menu">
-                        <a href="#" class="link-menu"> Inicio</a>
+                        <a href="#" class="link-menu" onclick="menuestilo(1)"> Inicio</a>
+                        <input type="radio" name="" id="">
                     </li>
     
                     <li class="item-menu">
-                        <a href="#sobre" class="link-menu">Sobre nós</a>
+                        <a href="#sobre" class="link-menu" onclick="menuestilo(2)">Sobre nós</a>
+                        <input type="radio" name="" id="">
                     </li>
     
                     <li class="item-menu">
@@ -49,13 +51,14 @@
             <div class="intro-info">
                 <h1>O melhor espaço <br> feito <span class="muda-cor">para você</span> </h1>
                 <p>
-                    Bem vindos aos Studio Cida Designer, 
-                    aqui você encontra serviços estéticos 
-                    pensados exclusivamente para trazer o 
-                    melhor da sua beleza. Confira nossos
-                    procedimentos e agende seu horário.
+                    Bem vindos aos Studio Cida Designer,
+                    aqui você encontra serviços estéticos
+                    pensados exclusivamente para trazer o
+                    melhor para seu bem estar e beleza. 
+                    Confira nossos procedimentos e agende
+                    sua experiência.
                 </p>
-                <a href="#" target="_blank" rel="">Fale Conosco</a>
+                <a href="https://api.whatsapp.com/send?phone=5511952987437&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos,%20por%20favor." target="_blank" rel="">Fale Conosco</a>
             </div>
             <div class="intro-img">
                 <div class="container-img">
@@ -64,7 +67,7 @@
             </div>
         </section>
         <!-- Sessão resumo / apresentação-->
-        <section class="resumo" id="sobre" id="servico">
+        <section class="resumo" id="sobre">
             <h1 class="titulo-sessao">Sobre nós</h1>
             <div class="img-resumo">
                 <div class="img-container">img1</div>
@@ -81,6 +84,45 @@
                     Ullam a delectus, eveniet cupiditate, nemo sequi dolore.
                 </p>
             </div>
+        </section>
+        <!-- Sessão de banner noticias -->
+        <section class="banner">
+            <!-- <h1 class="titulo-sessao"></h1> -->
+            <div id="carouselExampleInterval" class="carousel slide carousel-banner" data-bs-ride="carousel">
+                <!-- Container dos slides do carrossel -->
+                <div class="carousel-inner slide-content">
+                    <!-- slide 1 -->
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <div class="card-banner">
+                            <img src="./src/banner_ex.png" alt="">
+                        </div>
+                    </div>
+                    <!-- slide 2 -->
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="card-banner">
+                            painel 2
+                        </div>
+                    </div>
+                    <!-- slide 3 -->
+                    <div class="carousel-item">
+                        <div class="card-banner">
+                            painel 3
+                        </div>
+                    </div>
+                </div>
+                <!-- Botões prev e next -->
+
+                <!-- Prev -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <!-- Next -->
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </section>
         <!-- Sessão de serviços e procedimentos -->
         <section class="servicos" id="servicos">
@@ -204,15 +246,27 @@
                     <div class="img-perfil">
                         <div class="img-container"></div>
                     </div>
-                    <h2>Janaina</h2>
-                    <small>ESPECIALIDADE</small>
-                    <p>texto comlementar / resumoprofissional
-                        Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. A totam aspernatur 
-                        laboriosam officia tenetur commodi sed at,
-                        officiis cumque magni iure culpa tempore deserunt 
-                        facere provident ex exercitationem, id sint.
+                    <h2>Janaina Lima</h2>
+                    <small>Lash Designer e Massoterapeuta</small>
+                    <p>
+                        Formou-se em Lash Designer desde 2021, com mais de
+                        10 certificações na área, incluindo certificação 
+                        internacional pelo método shine e
+                        estilista de cílios pela Universidade dos cílios.
+                        Formou-se em massoterapeuta em 2022, especialista
+                        em massagem relaxante e ayurvédica.
                     </p>
+                    <div class="especialidades">
+                        <ol class="list-especialidades">
+                            <li>Bambuterapia</li>
+                            <li>Candle</li>
+                            <li>Escalda Pés</li>
+                            <li>Velas Quentes</li>
+                            <li>Terapeuticas</li>
+                            <li>Aromaterapia</li>
+                            <li>Rituais SPA</li>
+                        </ol>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -292,6 +346,33 @@
       769: {
         slidesPerView: 3,
         slidesPerGroup: 3,
+      },
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  var swiper = new Swiper(".banner", {
+    slidesPerView: 1,
+    centeredSlides: false,
+    slidesPerGroupSkip: 1,
+    grabCursor: true,
+    keyboard: {
+      enabled: true,
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
       },
     },
     scrollbar: {

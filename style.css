@@ -5,7 +5,7 @@
 /* Variaveis */
 :root{
     --background1:#96D4C9;
-    --backgroundMenu:#96d4c980;
+    --backgroundMenu:#96d4c9b3;
     --colorFontMenu:#4C8F8A;
 }
 *{
@@ -19,7 +19,7 @@
 
 }
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
     overflow: hidden;
     overflow-y: auto;
 
@@ -40,47 +40,61 @@ a{
     padding: 60px 30px 30px 20px;
     position: relative;
 }
-
-/* Header Menu de navegação principal */
-header.menu-principal{
-    width: 100%;
-    height: 60px;
-    position: fixed;
-    padding-left: 0;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: var(--backgroundMenu);
-    backdrop-filter: blur(10px);
-}
-header.menu-principal ul.lista-menu{
-     width: auto;
-     height: 100%;
-     display: flex;
-     justify-content: flex-start;
-     gap: 30px;
-}
-header.menu-principal ul.lista-menu li a{
-    color: var(--colorFontMenu);
-    font-weight: 600;
-    text-transform: uppercase;
-}
-header.menu-principal ul.lista-menu li a:hover{
-    color: #155D63;
-}
 section{
     height: 100vh;
     width: 100%;
     padding: 10px;
-
+    padding-top: 20px !important;
     margin-top: 10px;
     overflow: hidden;
     display: grid;
     background-color: var(--background1);
 }
+
+
+/* Header Menu de navegação principal */
+header.menu-principal{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    background-color: var(--backgroundMenu);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+header.menu-principal ul.lista-menu{
+
+    width: auto;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 !important;
+    gap: 20px;
+}
+header.menu-principal ul.lista-menu li{
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header.menu-principal ul.lista-menu li a{
+    color: var(--colorFontMenu);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header.menu-principal ul.lista-menu li a:hover{
+    color: #155D63;
+} 
 
 /* Sessao de introdução do site */
 section.introducao{
@@ -91,6 +105,8 @@ section.introducao{
     grid-template-columns: 40% 60%;
     gap: 10px;
     padding: 10px;
+    overflow: visible;
+
 }
 .introducao .intro-info h1{
     padding: 5px;
@@ -108,13 +124,13 @@ section.introducao{
 }
 .introducao .intro-info p{
     width: 95%;
-    font-size: 1.2rem;
-    margin-top: 20px;
+    font-size: 1.1rem;
+    margin-top: 10px;
     color: rgb(65, 65, 65);
     padding: 5px;
 }
 .introducao .intro-info a{
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left: 5px;
     display: flex;
     align-items: center;
@@ -148,11 +164,12 @@ section.introducao{
     width: 100%;
     height: 100%;
     position: relative;
+    overflow: visible;
 }
 .introducao .intro-img .container-img img{
-    width: 100%;
-    position: absolute;
+    width: 95%;
     top: -120px;
+    position: absolute;
     object-fit: cover;
 }
 
@@ -242,6 +259,50 @@ h1.titulo-sessao::after{
     font-size: 1rem;
 }
 
+/* Sessão banner - Noticia */
+.banner{
+    padding: 10px;
+    /* background: tomato; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 80%;
+    grid-template-areas: 
+    'titulo-sessao'
+    'carousel-banner';
+}
+.banner .titulo-sessao{
+    grid-area: titulo-sessao;
+}
+.banner .carousel-banner{
+    /* background-color: violet; */
+    grid-area: carousel-banner;
+    width: 100%;
+    height: 100%;
+
+}
+.banner .carousel-banner .slide-content{
+    width: 100%;
+    height: 100%;
+}
+.slide-content .carousel-item{
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    /* background-color: #ffffff; */
+}
+.carousel-item .card-banner{
+    background-color: #155D63;
+    height: 100%;
+}
+.carousel-item .card-banner img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
 /* Sessão Serviços */
 .servicos{
     /* background-color: violet; */
@@ -296,11 +357,16 @@ h1.titulo-sessao::after{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    background: aliceblue;
+    background: white;
     padding: 10px;
     border-radius: 10px;
     position: relative;
     border: solid 2px #155c6380;
+    
+}
+.card-slide:hover{
+    transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+    transform: scale(1.05);
     box-shadow: -29px 27px 6px -1px #155c632b;
     -webkit-box-shadow: -29px 27px 6px -1px #155c632b;
     -moz-box-shadow: -29px 27px 6px -1px #155c632b;
@@ -312,13 +378,14 @@ h1.titulo-sessao::after{
     background-color: #155D63;
 }
 .card-slide h3{
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-top: 10px;
     font-weight: 600;
 }
 .card-slide p{
-    font-size: .8rem;
-    width: 100%;
+    font-size: .6rem;
+    width: 95%;
+    margin: auto;
     height: 130px;
 }
 .card-slide a{
@@ -326,7 +393,7 @@ h1.titulo-sessao::after{
     text-decoration: none;
     width: 100px;
     height: 30px;
-    background:#155D63 ;
+    background: ;
     border-radius: 5px;
     color: white;
     font-size: 1rem;
@@ -335,6 +402,7 @@ h1.titulo-sessao::after{
     align-items: center;
     padding: 5px;
     margin: auto;
+    margin-top: -40px;
 }
 
 /* Sessão Profissionais */
@@ -372,9 +440,10 @@ h1.titulo-sessao::after{
     'perfil'
     'nome'
     'profissao'
-    'resumo';
+    'resumo'
+    'especialidades';
     grid-template-columns: 1fr;
-    grid-template-rows: 40% 10% 5% 45%;
+    grid-template-rows: 35% 10% 5% 30% 20%;
 
     box-shadow: -29px 27px 6px -1px #155c632b;
     -webkit-box-shadow: -29px 27px 6px -1px #155c632b;
@@ -387,14 +456,14 @@ h1.titulo-sessao::after{
     justify-content: center;
 }
 .profissionais ul li .img-perfil .img-container{
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
     border-radius: 10pc;
     background: #155D63;
 }
 .profissionais ul li h2{
     grid-area: nome;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     width: 100%;
     font-weight: 600;
     text-transform: capitalize;
@@ -403,19 +472,57 @@ h1.titulo-sessao::after{
 }
 .profissionais ul li small{
     grid-area: profissao;
+    color: #4C8F8A;
     width: 100;
     text-align: center;
-    font-size: .8rem;
+    font-size: .6rem;
     margin-top: -10px;
-    text-transform: capitalize;
 }
 .profissionais ul li p{
+    
     grid-area: resumo;
-    font-size: .8rem;
+    font-size: .6rem;
     width: 80%;
     margin: auto;
+    margin-top: 0px;
     color: grey;
 }
+.profissionais ul li .especialidades{
+    width: 100%;
+    height: 100%;
+    /* background-color: #155D63; */
+}
+.especialidades .list-especialidades{
+    width: auto;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.list-especialidades li{
+    border: none !important;
+    border-radius: 2px !important;
+    padding: 5px !important ;
+    font-size: .5rem;
+    font-weight: 800;
+    color: white;
+    /* margin: 5px; */
+    width: auto !important;
+    box-shadow: none !important;
+    background-color: #459082 !important;
+    cursor: pointer;
+}
+.list-especialidades li:hover{
+    background-color: #0b4d53 !important;
+}
+.profissionais ul li:nth-child(2) .especialidades{
+    /* background-color: blue !important; */
+    margin-top: -10px;
+}
+
 
 /* Sessão contato */
 .contato{
@@ -465,9 +572,6 @@ h1.titulo-sessao::after{
 .contato form .row-form label input[type='text']{
     text-transform: capitalize;
 }
-
-
-
 .contato div{
     grid-area: map;
 }
@@ -478,4 +582,19 @@ h1.titulo-sessao::after{
 }
 
 
-
+/* Scrollbar edit */
+    /* width */
+    ::-webkit-scrollbar {
+    width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background: #96c2bc;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb{
+    background: #4C8F8A;
+    border-radius: 10px;
+    }
