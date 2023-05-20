@@ -23,25 +23,23 @@
             <nav class="navegacao-menu">
                 <ul aria-label="lista de acesso dos lnks do menu de navegação principal" class="lista-menu">
                     <li class="item-menu">
-                        <a href="#" class="link-menu" onclick="menuestilo(1)"> Inicio</a>
-                        <input type="radio" name="" id="">
+                        <a href="#" class="link-menu" id="estiloinicio" onclick="menuEstilo(1)"> Inicio</a>
                     </li>
     
                     <li class="item-menu">
-                        <a href="#sobre" class="link-menu" onclick="menuestilo(2)">Sobre nós</a>
-                        <input type="radio" name="" id="">
+                        <a href="#sobre" class="link-menu" id="estilosobre" onclick="menuEstilo(2)"> Sobre nós</a>
+                    </li>
+
+                    <li class="item-menu">
+                        <a href="#servicos" class="link-menu"> Serviços</a>
                     </li>
     
                     <li class="item-menu">
-                        <a href="#servicos" class="link-menu">Serviços</a>
+                        <a href="#profissionais" class="link-menu"> Profissionais</a>
                     </li>
     
                     <li class="item-menu">
-                        <a href="#profissionais" class="link-menu">Profissionais</a>
-                    </li>
-    
-                    <li class="item-menu">
-                        <a href="#contato" class="link-menu">Contato</a>
+                        <a href="#contato" class="link-menu"> Contato</a>
                     </li>
                 </ul>
             </nav>
@@ -333,7 +331,7 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <!-- Initialize Swiper -->
-<script>
+<script aria-label="script swipper">
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     centeredSlides: false,
@@ -388,6 +386,15 @@
     },
   });
 </script>
+<!-- Script Style Menu -->
+<script>
+    
+    function menuEstilo(x){
+       
 
+    }
+
+
+</script>
 </body>
 </html>

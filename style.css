@@ -92,6 +92,10 @@ header.menu-principal ul.lista-menu li a{
     align-items: center;
     justify-content: center;
 }
+header.menu-principal ul.lista-menu li a.estilo-ativo{
+    border-bottom: solid 3px #155D63;
+    color: #155D63;
+}
 header.menu-principal ul.lista-menu li a:hover{
     color: #155D63;
 } 
