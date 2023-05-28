@@ -52,6 +52,7 @@ section{
 }
 
 
+
 /* Header Menu de navegação principal */
 header.menu-principal{
     display: flex;
@@ -67,6 +68,7 @@ header.menu-principal{
     top: 0;
     left: 0;
 }
+
 header.menu-principal ul.lista-menu{
 
     width: auto;
@@ -92,9 +94,12 @@ header.menu-principal ul.lista-menu li a{
     align-items: center;
     justify-content: center;
 }
-header.menu-principal ul.lista-menu li a:hover{
-    color: #155D63;
-} 
+header.menu-principal ul.lista-menu li a:hover, 
+a.ativo{
+    transition: ease-in-out .2s;
+    color: #0b4d53 !important;
+    border-bottom: #0b4d53 solid 3px;
+}
 
 /* Sessao de introdução do site */
 section.introducao{
@@ -113,11 +118,11 @@ section.introducao{
 }
 .introducao .intro-info h1,
 .introducao .intro-info h1 span{ 
-     letter-spacing: 2px;
-     line-height: 60px;
-     font-size: 2.2rem !important;
-     text-transform: uppercase;
-     color: var(--colorFontMenu);
+    letter-spacing: 2px;
+    line-height: 60px;
+    font-size: 2.2rem !important;
+    text-transform: uppercase;
+    color: var(--colorFontMenu);
 }
 .introducao .intro-info h1 span.muda-cor{
     color: #155D63;
