@@ -179,7 +179,6 @@ section.introducao{
 }
 
 /* Sessao resumo */
-
 section.resumo{
     width: 100%;
     height: 100vh;
@@ -193,8 +192,7 @@ section.resumo{
     padding: 20px;
     gap: 10px;
 }
-
- h1.titulo-sessao{
+h1.titulo-sessao{
     grid-area: titulo;
     display: inline-flex;
     position: relative;
@@ -305,9 +303,6 @@ h1.titulo-sessao::after{
 }
 
 
-
-
-
 /* Sessão Serviços */
 .servicos{
     /* background-color: violet; */
@@ -325,13 +320,13 @@ h1.titulo-sessao::after{
 }
 .servicos .carrossel{
     grid-area: carousel;
-    /* background-color: yellowgreen; */
     padding: 10px;
 }
 .servicos .carrossel ul{
     width: 100%;
     height: 100%;
 }
+
 /* SWIPER JS - CONTAINER SLIDE */
 .swiper{
     width: 100%;
@@ -340,6 +335,7 @@ h1.titulo-sessao::after{
     gap: 5px;
     grid-area: carousel;
 }
+
 /* Slide */
 .swiper-slide{
     margin-right: 2px;
@@ -348,6 +344,7 @@ h1.titulo-sessao::after{
     align-items: center;
     justify-content: center;
 }
+
 /* Marca pagina slide */
 .swiper-pagination-bullet{
     width: 25px;
@@ -355,6 +352,7 @@ h1.titulo-sessao::after{
     border-radius: 25px;
     background: var(--colorFontMenu);
 }
+
 /* Card do slide - detalhes dos procedimentos */
 .card-slide{
     width: 80%;
