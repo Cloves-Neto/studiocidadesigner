@@ -17,14 +17,14 @@
         <header class="menu-principal">
 
             <!-- Icone de menu renderizado no mobile -->
-            <div class="menu-mobile">
+            <div class="menu-mobile" onclick="menuMoba()"> 
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
 
             <!-- Navegacão menu -->
-            <nav class="navegacao-menu">    
+            <nav class="navegacao-menu" id="menuMoba">    
 
                 <!-- Lista de links ancora -->
                 <ul aria-label="lista de acesso dos lnks do menu de navegação principal" class="lista-menu">
@@ -58,6 +58,7 @@
                     <li class="item-menu">
                         <a href="#contato" class="link-menu dt" data-scroll="contato"> Contato</a>
                     </li>
+
                 </ul>
             </nav>
         </header>
@@ -470,7 +471,15 @@
 <script>
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('.dt');
+    let headernav = document.getElementById('menuMoba');
     
+    function menuMoba(){
+        headernav.classList.add('menuMoba');
+    }
+    window.addEventListener('scroll', ()=>{
+        headernav.classList.remove('menuMoba');
+    })
+
     function menuAtivo(){
         let len = sections.length;
         while(--len && window.scrollY + 97 < sections[len].offsetTop){}
@@ -479,6 +488,7 @@
     }
     menuAtivo();
     window.addEventListener("scroll", menuAtivo);
+
 </script>
 </body>
 </html>
