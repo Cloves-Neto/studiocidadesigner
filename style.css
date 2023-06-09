@@ -72,6 +72,9 @@ header.menu-principal{
     top: 0;
     left: 0;
 }
+header.menu-principal img{
+    display:none;
+}
 
 header.menu-principal ul.lista-menu{
 
@@ -858,6 +861,7 @@ border-radius: 10px;
         background-color: #0b4d53;
     }
     .menu-principal img{
+        display: block !important;
         width: 60px;
         position: fixed;
         top: 0px;
@@ -873,6 +877,7 @@ border-radius: 10px;
     section.introducao .intro-img{
         display: none;
     }
+
 
     
     
