@@ -793,6 +793,8 @@ border-radius: 10px;
     
     .menu-principal{
         width: 100vw;
+        height: 60px !important;
+        background-color: var(--background1) !important;
         position: relative;
     }
     .menu-principal .navegacao-menu{
@@ -843,8 +845,8 @@ border-radius: 10px;
         flex-direction: column;
         gap: 5px;
         position: absolute;
-        right: 15px;
-        top: 5px;
+        right: 20px;
+        top: 20px;
         cursor: pointer;
         z-index: 10;
     }
@@ -855,17 +857,24 @@ border-radius: 10px;
         display: inline-block;
         background-color: #0b4d53;
     }
-
+    .menu-principal img{
+        width: 60px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
     section{
         display: flex !important;
         flex-direction: column;
         height: auto !important;
-        margin-top: 50px;
+        margin-top: 0px;
 
     }
-    section.introducao{
-        flex-direction: column-reverse;
+    section.introducao .intro-img{
+        display: none;
     }
+
+    
     
 
 
