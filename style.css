@@ -858,8 +858,17 @@ border-radius: 10px;
 
     section{
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: column;
+        height: auto !important;
+        margin-top: 50px;
+
     }
+    section.introducao{
+        flex-direction: column-reverse;
+    }
+    
+
+
 
 
 }
