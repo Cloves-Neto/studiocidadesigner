@@ -17,7 +17,7 @@
         <header class="menu-principal">
             <img src="./src/logo.png" alt="logo menu">
             <!-- Icone de menu renderizado no mobile -->
-            <div class="menu-mobile" onclick="menuMoba()"> 
+            <div class="menuMobile" id="divspan" onclick="menuMoba()"> 
                 <span></span>
                 <span></span>
                 <span></span>
@@ -472,12 +472,16 @@
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('.dt');
     let headernav = document.getElementById('menuMoba');
+    let divspan = document.getElementById('divspan');
     
     function menuMoba(){
-        headernav.classList.add('menuMoba');
+        headernav.classList.toggle('menuMoba');
+        divspan.classList.toggle('mobaAtivo');
     }
+    
     window.addEventListener('scroll', ()=>{
         headernav.classList.remove('menuMoba');
+        divspan.classList.remove('mobaAtivo');
     })
 
     function menuAtivo(){
