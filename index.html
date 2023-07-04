@@ -467,10 +467,30 @@
   });
 </script>
 
-<!-- Style menu scroll -->
+<!-- Style Local -->
 <script>
-    let sections = document.querySelectorAll('section');
-    let navLinks = document.querySelectorAll('.dt');
+
+    // Style referencia de sessão do menu
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        window.addEventListener("scroll", menuAtivo);
+
+        function menuAtivo(){
+            let sections = document.querySelectorAll('section');
+            
+            let navLinks = document.querySelectorAll('.dt');
+
+            let len = sections.length;
+            while(--len && window.scrollY + 97 < sections[len].offsetTop){}
+            navLinks.forEach(nvl => nvl.classList.remove('ativo'));
+            navLinks[len].classList.add('ativo');
+        }
+        menuAtivo();
+    })
+
+    // obseva scroll e fecha menu
+
     let headernav = document.getElementById('menuMoba');
     let divspan = document.getElementById('divspan');
     
@@ -483,15 +503,6 @@
         headernav.classList.remove('menuMoba');
         divspan.classList.remove('mobaAtivo');
     })
-
-    function menuAtivo(){
-        let len = sections.length;
-        while(--len && window.scrollY + 97 < sections[len].offsetTop){}
-        navLinks.forEach(nvl => nvl.classList.remove('ativo'));
-        navLinks[len].classList.add('ativo');
-    }
-    menuAtivo();
-    window.addEventListener("scroll", menuAtivo);
 
 </script>
 </body>
