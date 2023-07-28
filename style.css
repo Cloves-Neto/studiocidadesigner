@@ -55,8 +55,6 @@ section{
     background-color: var(--background1);
 }
 
-
-
 /* Header Menu de navegação principal */
 header.menu-principal{
     display: flex;
@@ -75,7 +73,6 @@ header.menu-principal{
 header.menu-principal img{
     display:none;
 }
-
 header.menu-principal ul.lista-menu{
 
     width: auto;
