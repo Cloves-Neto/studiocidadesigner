@@ -219,6 +219,39 @@
             width: 100%;
             height: 100vh;
         }
+        .granbox main .section.sobre .wrap.content{
+            width: 100%;
+            height: 50%;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .granbox main .section.sobre .wrap.content .section-title{
+            width: 80%;
+            /* background-color: aliceblue; */
+            height: 100%;
+        }
+        .granbox main .section.sobre .wrap.content .section-contain{
+            display: flex;
+            padding: 30px;
+            height: 100%;
+            /* background-color: aliceblue; */
+
+        }
+        .granbox main .section.sobre .wrap.content .section-contain .decoration{
+
+        }
+
+
+        .granbox main .section.sobre .wrap.image{
+            width: 100%;
+            height: 50%;
+            background-color: orange;
+
+        }
+
+
 
         /* Serviços */
         .granbox main .section.servicos{
@@ -596,6 +629,29 @@
                                     <img src="./src/banner_ex.png" alt="">
                                 </picture>
                             </div>
+                          
+                        </div>
+
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <div class="card-banner">
+                                <picture>
+                                    <source media="(max-width: 780px)" srcset="src/banner780x450.png" type="image/png">
+                                    <!-- <source media="(max-width: 1000px)" srcset="src/banner1000x450.png" type="image/png"> -->
+                                    <source media="(max-width: 1500px)" srcset="src/banner1500x450.png" type="image/png">
+                                    <img src="./src/banner1000x450.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <div class="card-banner">
+                                <picture>
+                                    <source media="(max-width: 780px)" srcset="src/banner780x450.png" type="image/png">
+                                    <source media="(max-width: 1000px)" srcset="src/banner1000x450.png" type="image/png">
+                                    <!-- <source media="(max-width: 1500px)" srcset="src/banner1500x450.png" type="image/png"> -->
+                                    <img src="./src/banner1500x450.png" alt="">
+                                </picture>
+                            </div>
                         </div>
                     </div>
                     <!-- Prev -->
@@ -619,7 +675,7 @@
                         <h2>Sobre nós</h2>
                     </div>
                     <div class="section-contain">
-                        <img src="" alt="imagem Studio informação">
+                        <div class="decoration"></div>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Maxime ipsa optio porro sunt. Illo iste quam odio voluptatem,
