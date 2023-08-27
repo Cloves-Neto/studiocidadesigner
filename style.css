@@ -4,10 +4,15 @@
 
 /* Variaveis */
 :root{
-    --background1:#96D4C9;
-    --backgroundMenu:#96d4c9b3;
-    --colorFontMenu:#4C8F8A;
+    --corprincipal: #96D4C9;
+    --corsecundaria: #11635e;
+    --corterciaria: #fff;
+    --textocorpo: #000;
+    --textosub: #454545;
+    --textocor: #cef2e8;
+    --textodestaque: #0c695b;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -16,289 +21,234 @@
     list-style-type: none !important;
     font-size: 1.2rem;
     font-family: 'Inter', sans-serif;
+}
 
+/* Title */
+.section-title{
+    width: 100%;
+    height: 10%;
 }
-select{
-    cursor: pointer;
-}
-html{
-    scroll-behavior: smooth !important;
-    overflow: hidden;
-    overflow-y: auto;
 
-}
+/* Body */
 body{
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--background1);
-}
-a{
-    text-decoration: none;
-}
-.container{
-    width: 100%;
-    max-width: 1248px;
-    height: auto;
-    padding: 60px 30px 30px 20px;
-    position: relative;
-}
-section{
-    height: 100vh;
-    max-height: 700px;
-    width: 100%;
-    padding: 10px;
-    padding-top: 20px !important;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    overflow: hidden;
-    display: grid;
-    background-color: var(--background1);
-}
-
-/* Header Menu de navegação principal */
-header.menu-principal{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0;
+    justify-content: center;
+
+    overflow: hidden;
+    overflow-y: scroll;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--corprincipal);
+
+}
+
+/* Container */
+.granbox{
+    background-color: #96D4C9;
+
+    position: relative;
+    /* padding: 10px; */
+
     width: 100%;
-    height: 40px;
-    background-color: var(--backgroundMenu);
-    backdrop-filter: blur(10px);
+    max-width: 1920px;
+
+    height: 100%;
+}
+
+/* Header */
+.granbox header.large-size{
+    top: 0;
+    left: 0;
     position: fixed;
     z-index: 10;
+
+    width: 100%;
+    height: 110px;
+    
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #96d4c9c3;
+    backdrop-filter: blur(15px);
+    border-bottom: solid 2px #00976070;
+}   
+.granbox header .centered{
+    width: 100%;
+    max-width: 1920px;
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.granbox header .centered figure{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 10px;
+    top: -5px;
+
+    display: none;
+}
+.granbox header .centered figure img{
+    width: 100%;
+    height: 100%;
+}
+.granbox header .centered figure figcaption{
+    display: none;
+}
+.granbox header .centered nav{
+
+    width: 100%;
+    max-width: 800px;
+
+    height: 100%;
+
+    position: absolute;
     top: 0;
     left: 0;
 }
-header.menu-principal img{
-    display:none;
-}
-header.menu-principal ul.lista-menu{
+.granbox header .centered nav ul{
+    width: 100%;
+    height: 100%;
 
-    width: auto;
-    height: 40px;
-    display: inline-flex;
+    padding: 30px;
+    display: flex;
     align-items: center;
-    margin: 0 !important;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 60px;
 }
-header.menu-principal ul.lista-menu li{
-    width: auto;
+.granbox header .centered nav ul li a{
+    color:#178881;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+.granbox header .centered nav ul li a:hover{
+    color: var(--textodestaque);
+}
+
+/* Main */
+.granbox main{
+    padding-top: 60px;
+
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    overflow: hidden;
+}
+.granbox main .section{
+    padding-top: 30px;
+    width: 100%;
+    height: 90vh;
+}
+
+/* Inicio */
+.granbox main .section.inicio{
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin-top: 20px;
+    background-color: #96D4C9;
+}
+.granbox main .section.inicio .wrap{
+    width: 50%;
+    height: 80vh;
+    min-width: 400px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* flex-direction: column; */
+    padding: 30px;
 }
-header.menu-principal ul.lista-menu li a{
-    color: var(--colorFontMenu);
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-header.menu-principal ul.lista-menu li a:hover, 
-a.ativo{
-    transition: ease-in-out .2s;
-    color: #0b4d53 !important;
-    border-bottom: #0b4d53 solid 3px;
-}
-
-/* Sessao de introdução do site */
-section.introducao{
-    width: 100%;  
-    height: 100vh;
-    display: grid;
-    grid-template-areas: 'info img';
-    grid-template-columns: 40% 60%;
-    gap: 10px;
-    padding: 10px;
-    overflow: visible;
-
-}
-.introducao .intro-info h1{
-    padding: 5px;
-}
-.introducao .intro-info h1,
-.introducao .intro-info h1 span{ 
-    letter-spacing: 2px;
-    line-height: 60px;
-    font-size: 2.2rem !important;
-    text-transform: uppercase;
-    color: var(--colorFontMenu);
-}
-.introducao .intro-info h1 span.muda-cor{
-    color: #155D63;
-}
-.introducao .intro-info p{
-    width: 95%;
-    font-size: 1.1rem;
-    margin-top: 10px;
-    color: rgb(65, 65, 65);
-    padding: 5px;
-}
-.introducao .intro-info a{
-    margin-top: 30px;
-    margin-left: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 250px;
-    height: 70px;
-    background-color: var(--colorFontMenu);
-    padding: 10px 20px 10px 20px;
-    color: white;
-    text-transform: uppercase;
-    font-weight: 700px;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    border-radius: 5px;
-    transition: background-color .3s ease-in-out;
-} 
-.introducao .intro-info a:hover{
-    background-color: #155D63;
-}
-.introducao .intro-info{
-    grid-area: info;
+.granbox main .section.inicio .wrap.intro{
+    width: 60%;
+    padding: 60px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-}
-.introducao .intro-img{
-    grid-area: img;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
     
 }
-.introducao .intro-img .container-img{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: visible;
+.granbox main .section.inicio .wrap.intro h1{
+    width: 80%;
+    letter-spacing: 6px;
 }
-.introducao .intro-img .container-img img{
-    width: 95%;
-    top: -120px;
-    position: absolute;
-    object-fit: cover;
-}
-
-/* Sessao resumo */
-section.resumo{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-areas: 
-    'titulo titulo'
-    'imgresumo textoresumo'
-    ;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10% 85%;
-    padding: 20px;
-    gap: 10px;
-}
-h1.titulo-sessao{
-    grid-area: titulo;
-    display: inline-flex;
-    position: relative;
+.granbox main .section.inicio .wrap.intro h1,
+.granbox main .section.inicio .wrap.intro h1 span{
+    color: var(--textocor);
+    font-size:3.4rem;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.6rem;
-    align-items: center;
-    color: #0b4d53;
+    
 }
-h1.titulo-sessao::after{
-    content: '';
-    width: 60px;
-    height: 5px;
-    background: var(--colorFontMenu);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 5;
+.granbox main .section.inicio .wrap.intro h1 span{
+    color:#178881;
 }
-.resumo .img-resumo{
-    grid-area: imgresumo;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 5px;
-    position: relative;
-}
-.resumo .img-resumo .img-container{
-    width: 300px;
-    height: 200px;
-    border-radius: 15px;
-    background-color: #4C8F8A;
-    position: absolute;
-    top: 15%;
-}
-.resumo .img-resumo .img-container:nth-child(1){
-    background-color: #0b4d53;
-}
-.resumo .img-resumo .img-container:nth-child(2){
-    left: 35%;
-    top: 35%;
-}
-.resumo .texto-resumo{
-    grid-area: textoresumo;
-
-    padding: 60px 0 0 0 ;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-.resumo .texto-resumo h2{
-    width: 100%;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+.granbox main .section.inicio .wrap.intro p{
+    width: 80%;
     font-size: 1.4rem;
+    margin-top: 10px;
+    color: var(--textosub);
+}
+.granbox main .section.inicio .wrap.intro a{
+    width: 280px;
+    height: 80px;
+    background-color:#178881;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    color:var(--corterciaria);
     text-transform: uppercase;
-    font-weight: 600;
+    text-decoration: none;
+    font-weight: 500;
 }
-.resumo .texto-resumo p{
-    padding: 5px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    width: 90%;
-    font-size: 1rem;
+.granbox main .section.inicio .wrap.img-container{
+    width: 50%;
+    right: 0;
+    background-image: url(./src/studio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    backdrop-filter: blur(10px);
+    opacity: .8;
 }
 
-/* Sessão banner - Noticia */
-.banner{
-    padding: 10px;
-    /* background: tomato; */
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10% 80%;
-    grid-template-areas: 
-    'titulo-sessao'
-    'carousel-banner';
-}
-.banner .titulo-sessao{
-    grid-area: titulo-sessao;
-}
-.banner .carousel-banner{
-    /* background-color: violet; */
-    grid-area: carousel-banner;
+/* Banner */
+.granbox main .section.banner{
     width: 100%;
-    height: 100%;
-
+    height: 450px;
+    margin: 0;
+    padding-top: 0;
 }
-.banner .carousel-banner .slide-content{
+.granbox main .section.banner .carousel-banner{
     width: 100%;
     height: 100%;
 }
-.slide-content .carousel-item{
+.granbox main .section.banner .carousel-banner .slide-content{
     width: 100%;
     height: 100%;
-    padding: 15px;
-    /* background-color: #ffffff; */
+}
+.carousel-item{
+    width: 100%;
+    height: 100%;
 }
 .carousel-item .card-banner{
-    background-color: #155D63;
+    width: 100%;
     height: 100%;
 }
 .carousel-item .card-banner img{
@@ -306,593 +256,848 @@ h1.titulo-sessao::after{
     height: 100%;
 }
 
-
-/* Sessão Serviços */
-.servicos{
-    /* background-color: violet; */
-    padding: 15px;
-    display: grid;
-    grid-template-areas: 
-    'titulo'
-    'carousel';
-    grid-template-columns: 1fr;
-    grid-template-rows: 10% 85%;
-    gap: 10px;
+/* Sobre */
+.granbox main .section.sobre{
+    background-color: var(--corsecundaria);
+    padding: 60px;
+    color: #fff;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.servicos .titulo-sessao{
-    grid-area: titulo;
-}
-.servicos .carrossel{
-    grid-area: carousel;
-    padding: 10px;
-}
-.servicos .carrossel ul{
+.granbox main .section.sobre .wrap.content{
     width: 100%;
     height: 100%;
-}
-
-/* SWIPER JS - CONTAINER SLIDE */
-.swiper{
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    gap: 5px;
-    grid-area: carousel;
-}
-
-/* Slide */
-.swiper-slide{
-    margin-right: 2px;
-    height: 90%;
+    padding: 30px;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-/* Marca pagina slide */
-.swiper-pagination-bullet{
-    width: 25px;
-    height: 10px;
-    border-radius: 25px;
-    background: var(--colorFontMenu);
-}
-
-/* Card do slide - detalhes dos procedimentos */
-.card-slide{
-    width: 80%;
-    height: 95%;
-    display: flex;
     flex-direction: column;
-    gap: 5px;
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-    position: relative;
-    border: solid 2px #155c6380;
-    
-}
-.card-slide:hover{
-    transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
-    transform: scale(1.05);
-    box-shadow: -29px 27px 6px -1px #155c632b;
-    -webkit-box-shadow: -29px 27px 6px -1px #155c632b;
-    -moz-box-shadow: -29px 27px 6px -1px #155c632b;
-}
-.card-slide .img-card{
+    justify-content: space-around;
+}   
+.granbox main .section.sobre .wrap.content .section-title{
     width: 100%;
-    height: 180px;
-    border-radius: 5px;
-    background-color: #155D63;
+    position: relative;
 }
-.card-slide h3{
-    font-size: 1rem;
-    margin-top: 10px;
-    font-weight: 600;
-}
-.card-slide p{
-    font-size: .6rem;
-    width: 95%;
-    margin: auto;
-    height: 130px;
-}
-.card-slide a{
-    display: inline-flex;
-    text-decoration: none;
+.granbox main .section.sobre .wrap.content .section-title::after{
+    content: '';
     width: 100px;
-    height: 30px;
-    background: ;
-    border-radius: 5px;
-    color: white;
-    font-size: 1rem;
-    text-transform: uppercase;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    margin: auto;
-    margin-top: -40px;
-}
-
-/* Sessão Profissionais */
-.profissionais{
-    display: grid;
-    grid-template-areas: 
-    'titulo'
-    'card';
-    grid-template-columns: 1fr;
-    grid-template-rows: 10% 90%;
-    padding: 5px;
-    gap: 5px;
-}
-.profissionais .titulo-sessao{
-    grid-area: titulo;
-}
-.profissionais ul{
-    grid-area: card;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-
-}
-.profissionais ul li{
-    width: 380px;
-    height: 95%;
-    border-radius: 10px;
+    height: 5px;
     background-color: white;
-    padding: 10px;
-    border: solid 2px #155c6380;
-    display: grid;
-    grid-template-areas: 
-    'perfil'
-    'nome'
-    'profissao'
-    'resumo'
-    'especialidades';
-    grid-template-columns: 1fr;
-    grid-template-rows: 35% 10% 5% 30% 20%;
-
-    box-shadow: -29px 27px 6px -1px #155c632b;
-    -webkit-box-shadow: -29px 27px 6px -1px #155c632b;
-    -moz-box-shadow: -29px 27px 6px -1px #155c632b;
+    position: absolute;
+    left: 0;
+    bottom: -40px;
 }
-.profissionais ul li .img-perfil{
-    grid-area: perfil;
+.granbox main .section.sobre .wrap.content .section-contain{
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.profissionais ul li .img-perfil .img-container{
-    width: 140px;
-    height: 140px;
-    border-radius: 200px;
-    background: #155D63;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: var(--colorFontMenu) solid 5px;
-
-}
-.profissionais ul li .img-perfil .img-container img{
-    width: 120%;
-    max-width: 160px;
-    object-fit: cover;
-    border-radius: 200px;
-    object-position: center center;
-
-}
-
-.profissionais ul li h2{
-    grid-area: nome;
-    font-size: 1.2rem;
-    width: 100%;
-    font-weight: 600;
-    text-transform: capitalize;
-    text-align: center;
-    color: #155D63;
-}
-.profissionais ul li small{
-    grid-area: profissao;
-    color: #4C8F8A;
-    width: 100;
-    text-align: center;
-    font-size: .6rem;
-    margin-top: -10px;
-}
-.profissionais ul li p{
-    
-    grid-area: resumo;
-    font-size: .6rem;
-    width: 80%;
-    margin: auto;
-    margin-top: 0px;
-    color: grey;
-}
-.profissionais ul li .especialidades{
-    width: 100%;
+    margin-top: 60px;
     height: 100%;
-    /* background-color: #155D63; */
+
 }
-.especialidades .list-especialidades{
-    width: auto;
+.granbox main .section.sobre .wrap.content .section-contain p{
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+
+/* Serviços */
+.granbox main .section.servicos{
+    width: 100%;
     display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    padding: 15px;
-    gap: 5px;
+    flex-direction: column;
+    background-color: #fff;
+
+} 
+.granbox main .section.servicos .mySwiper{
+    width: 100%;
+    height: 90%;
+    padding: 30px;
+}
+.swiper-wrapper{
+    height: 100%;
+    display: flex;
     align-items: center;
-    justify-content: center;
-}
-.list-especialidades li{
-    border: none !important;
-    border-radius: 2px !important;
-    padding: 5px !important ;
-    font-size: .5rem;
-    font-weight: 800;
-    color: white;
-    /* margin: 5px; */
-    width: auto !important;
-    box-shadow: none !important;
-    background-color: #459082 !important;
-    cursor: pointer;
-}
-.list-especialidades li:hover{
-    background-color: #0b4d53 !important;
-}
-.profissionais ul li:nth-child(2) .especialidades{
-    /* background-color: blue !important; */
-    margin-top: -10px;
-}
-
-
-
-/* Sessão contato */
-.contato{
-    display: grid;
-    grid-template-rows: 10% 80%;
-    grid-template-columns: 1fr calc(1fr - 150px);
-    gap: 30px;
-    grid-template-areas:
-    'titulo titulo'
-    'form map';
-    overflow: visible;
-
     position: relative;
 }
-/* Titulo sessao Contato */
-.contato .titulo-sessao{
-    grid-area: titulo;
-
-}
-/* Form sesao Contato */
-.contato form{
-    grid-area: form;
-    padding: 15px;
-}
-.contato form .form-contain{
-    width: 400px;
-    height: 500px;
+.swiper-wrapper .swiper-slide{
+    width: 100px;
+    height: 600;
+    overflow: hidden;
     background-color: white;
-    border: #0b4d53 solid 2px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-}
-.contato form .form-contain .row-form{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin-top: 10px;
+    padding: 30px;
+}
+.swiper-wrapper .swiper-slide .card-slide{
+    width: 90%;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 5px;
 
 }
-.contato form .form-contain .row-form label{
-    display: inline-flex ;
-    flex-direction: column;
+.swiper-wrapper .swiper-slide .card-slide .img-card{
     width: 100%;
-    /* background-color: orange; */
+    height: 40%;
+    
+    background-color: #96D4C9;
+}
+.swiper-wrapper .swiper-slide .card-slide h3{
+    width: 100%;
+    height: 10%;
+    
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+.swiper-wrapper .swiper-slide .card-slide p{
+    width: 100%;
+    height: 30%;
+
+    margin-top: -15px;
+    font-size: 1rem;
+}
+.swiper-wrapper .swiper-slide .card-slide a{
+    width: 200px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--textodestaque);
+    background-color: var(--textocor);
+    border: solid 2px var(--corsecundaria);
+
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: -50px;
+
+}
+.swiper-wrapper .swiper-slide .card-slide a:hover{
+    background-color: var(--textodestaque);
+    color: white;
+}
+.swiper-pagination{
+    margin-top: -10px !important;
+}
+.swiper-pagination-bullet{
+    width: 20px;
+    height: 20px;
+}
+.swiper-pagination-bullet-active{
+    background-color: var(--corsecundaria);
+}
+
+/* Contato */
+.granbox main .section.contato{
+    width: 100%;
+    height: 80vh;
+
+    color: var(--textodestaque);
+
+    display: flex;
+    flex-direction: column;
+}
+.granbox main .section.contato .section-form{
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    background-color: var(--corprincipal);
+
+}
+.granbox main .section.contato .section-form .section-title{
+    width: 50%;
+    height: 100%;
+    padding: 60px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.granbox main .section.contato .section-form .section-title h2{
+    width: 100%;
+    font-size: 2rem;
+    position: relative;
+}
+.granbox main .section.contato .section-form .section-title h2::after{
+    content: '';
+    position: absolute;
+
+    width: 100px;
+    height: 5px;
+
+    background-color: var(--textodestaque);
+    left: 0;
+    bottom: -20px;
+
+
+}
+.granbox main .section.contato .section-form .section-title p{
+    font-size: 1rem;
+    color: var(--textodestaque);
+    margin-top: 10px;
+                
+}
+.granbox main .section.contato .section-form .formu{
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 5px;
-    font-size: .8rem;
+    padding: 20px;
+}
+.formu .row-formu{
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    gap: 10px;
+}
+.formu .row-formu label{
+    width: 40%;
+    height: 80px;
+    font-size: 1rem;
+    display: flex;
     gap: 5px;
-    color: #0b4d53;
-    font-weight: 600;
-    text-transform: uppercase;
+    flex-direction: column;
 }
-.contato form .form-contain .row-form input::placeholder,
-.contato form .form-contain .row-form textarea::placeholder{
-    color: rgb(187, 187, 187);
-    font-size: .6rem;
-}
-.contato form .form-contain .row-form label input,
-.contato form .form-contain .row-form label select{
-    width: 90%;
-    height: 30px;
-    font-size: .8rem;
+.formu .row-formu label input{
+    width: 100%;
+    height: 100%;
+    border: none;
     border-radius: 100px;
-    border: solid 2px var(--colorFontMenu);
-    color: #0b4d53;
-    background-color: white;
+    color: var(--textodestaque);
     outline: none;
-    padding: 0 5px 2px 10px; 
+    font-size: 1rem;
+    padding: 5px;
+    padding-left: 15px;
 }
-.contato form .form-contain .row-form label select option{
-    font-size: .8rem;
-    background-color: var(--backgroundMenu);
-    color: var(--colorFontMenu);
+.formu .row-formu label input#nome{
+    text-transform: capitalize;
 }
-.contato form .form-contain .row-form textarea{
-    resize: none;
+.formu .row-formu label select{
+    height: 100%;
+    border-radius: 100px;
+    padding: 5px;
+    padding-left: 15px;
+    font-size: 1rem;
+    color: #11635e;
     outline: none;
-    margin-top: 30px;
-    border: var(--colorFontMenu) solid 2px;
-    border-radius: 5px;
-    font-size: .8rem;
-    color: #155D63;
-    width: 95%;
-    height: 200px;
+    border: none;
+}
+.formu .row-formu.text{
+    flex-direction: column;
+    align-items: flex-end;
+    width: 80%;
+}
+.formu .row-formu.text textarea{
     padding: 10px;
+    font-size: 1rem;
+    color: var(--textodestaque);
+    width: 100%;
+    height: 90px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
 }
-.contato form .form-contain input[type="submit"]{
+.formu .row-formu.text input[type="submit"]{
     width: 120px;
     height: 40px;
     font-size: 1rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding: 0 5px 1px 5px;
-    color: white;
-    background-color: var(--colorFontMenu);
+    color: var(--corsecundaria);
     outline: none;
     border: none;
-    transition: .3s;
+    background-color: #fff;
     border-radius: 100px;
-    margin-top: -45px;
 }
-.contato form .form-contain input:hover[type="submit"]{
-    background-color: #0b4d53 !important;
+.formu .row-formu.text input[type="submit"]:hover{
+    color: var(--textocor);
+    background-color: var(--corsecundaria);
 }
-
-
-.contato .map{
-    grid-area: map;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 15px;
-    align-items: center;
-    justify-content: center;
-    
-}
-.contato .map iframe{
-    width: 450px;
-    height: 300px;
-    border-radius: 10px;
-    border: solid 3px var(--colorFontMenu) !important;
-    margin-top: 50px;
-    margin-left: -100px;
-
-}
-.contato .map .redes{
+.granbox main .section.contato .section-maps{
     width: 100%;
-    height: 80px;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+.granbox main .section.contato .section-maps iframe{
+    width: 100%;
+    height: 100% !important;
+    /* max-height: 300px; */
+}
+
+/* footer */
+.granbox footer.large-size{
+
+    width: 100%;
+    height: 200px;
+
+    /* padding: 5px; */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: 120px;
-    gap: 20px;
+
+    background-color: var(--corsecundaria);
 }
-.contato .map .redes li{
-    width: 40px;
-    height: 40px;
-    border-radius: 100px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .3s;
-}
-.contato .map .redes li a{
+.granbox footer.large-size .centered{
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #155D63;
-    transition: .3s;
-
-}
-.contato .map .redes li:hover{
-    background-color: #0b4d53;
-}
-.contato .map .redes li:hover a{
-    color: white;
-}
-
-footer{
-    width: 100vw;
-    height: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: white;
-    background-color: #155D63;
-    margin-top: 20px;
-    position: absolute;
-    bottom: -130px;
-    left: 0;
-    overflow: hidden;
+    /* padding: 30px; */
 }
-footer ul{
-    margin-top: 30px;
+.granbox footer.large-size .centered ul{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 100%;
-    gap: 15px;
+    gap: 20px;
 }
-footer ul li{
-    width: 35px;
-    height: 35px;
-    background-color: white;
+.granbox footer.large-size .centered ul li{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
     border-radius: 100px;
 }
-footer ul li a{
+.granbox footer.large-size .centered ul li a{
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: #0b4d53;
-    border-radius: 100px;
+    justify-content: center;
 }
-footer p{
+.granbox footer.large-size .centered ul li a ion-icon{
+    width: 60%;
+    color: #11635e;
+}
+.granbox footer.large-size .centered p{
+    font-size: .8rem;
+    color: #fff;
     text-align: center;
-    font-size: .6rem;
-    width: 100%;
-    padding-top: 15px;
 }
-footer small{
-    width: 20%;
-}
-footer small,
-footer small a{
+.granbox footer.large-size .centered div p,
+.granbox footer.large-size .centered div p a{
     font-size: .5rem;
-}
-footer small a{
-    color: var(--background1);
-}
-
-
-/* Scrollbar edit */
-
-/* width */
-::-webkit-scrollbar {
-width: 10px;
+} 
+.granbox footer.large-size .centered div p a{
+    cursor: pointer;
+    color: var(--corprincipal);
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-background: #96c2bc;
-}
+/* Media Query responsivo Tablet*/
+@media (max-width: 1000px) and (orientation: portrait){
 
-/* Handle */
-::-webkit-scrollbar-thumb{
-background: #4C8F8A;
-border-radius: 10px;
-}
-
-
-/* Responsivo */
-
-@media only screen and (max-width: 1000px) {
-    
-    .menu-principal{
-        width: 100vw;
-        height: 60px !important;
-        background-color: var(--background1) !important;
-        position: relative;
+    .granbox header .centered figure{
+        display: flex;
     }
-    .menu-principal .navegacao-menu{
-        position: fixed;
-        transform: translateX(500px);
-        transition: transform .3s ease-in-out;
-        width: 250px;
-        background-color: var(--background1);
-        height: 85vh;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        right: -2px;
-        top: 50px;
-        border: solid var(--colorFontMenu) 2px;
-    } 
-    .menu-principal .navegacao-menu ul{
-        display: flex !important;
+    .granbox header .centered nav{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 10px;
+    }
+    .granbox header .centered nav .menu-mobile{
+        width: 60px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        width: 100% !important;
-        height: 100% !important;
-        flex-wrap: nowrap;
-        align-content: stretch;
-        justify-content: space-around;
-        gap: 0 !important;
-        padding: 0 !important;
+        gap: 10px;
+    }
+    .granbox header .centered nav .menu-mobile span{
+        width: 80%;
+        height: 8px;
+        background-color:#0c695b;
+        border-radius: 10px;
+        z-index: 10;
+        transition: ease-in-out 0.2s;
+    }
+    .granbox header .centered nav.ativo .menu-mobile span{
+        background-color:#96D4C9;
+    }
+    .granbox header .centered nav.ativo .menu-mobile span:nth-child(1){
+        transform: translateY(18px) rotate(45deg);
+        transition: ease-in-out 0.2s;
+    }
+    .granbox header .centered nav.ativo .menu-mobile span:nth-child(2){
+        /* transform: translateX(-200px); */
+        opacity: 0;
+        /* transition: ease-in-out 0.5s; */
+    }
+    .granbox header .centered nav.ativo .menu-mobile span:nth-child(3){
+        transform: translateY(-18px) rotate(-45deg);
+        transition: ease-in-out 0.2s;
+    }
+    .granbox header .centered nav ul{
+        position: absolute;
+        top: -4px;
+        right: -8px;
+        width: 250px;
+        height: 100vh;
+        background-color:#178881;
+        border-radius: 10px;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        transition: ease-in-out .2s;
+        transform: translateX(600px);
+    }
+    .granbox header .centered .menu-nav.ativo ul{
+        transition: ease-in-out .2s;
+        transform: translateX(0px);
         
     }
-    .menu-principal .navegacao-menu ul li{
-        padding-left: 20px;
-        width: 100% !important;
-        height: 10px;
-        justify-content: flex-start !important;
-        margin: 0;
+    .granbox header .centered .menu-nav.ativo ul li a{
+        color: white;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.8rem;
     }
-    .menu-principal .navegacao-menu ul li a{
+    .granbox header .centered .menu-nav.ativo ul li a:hover{
+        color:#96D4C9;
+    }
+
+    /* Main */
+    .granbox main{
+        padding-top: 60px;
+
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        overflow: hidden;
+    }
+    .granbox main .section{
+        padding-top: 30px;
+        width: 100%;
+        height: 90vh;
+    }
+
+    /* Inicio */
+    .granbox main .section.inicio{
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
+        width: 100%;
+        position: relative;
+        margin-top: 20px;
+        background-color: #96D4C9;
     }
-    .menu-principal .navegacao-menu.menuMoba{
-        transform: translateX(0px);
-    }
-    .menu-principal .menuMobile{
-        width: 40px;
+    .granbox main .section.inicio .wrap{
+        width: 100%;
         height: 100%;
         display: flex;
-        flex-direction: column;
-        gap: 5px;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        cursor: pointer;
-        z-index: 10;
+        align-items: center;
+        justify-content: center;
+        padding: 60px;
     }
-    .menu-principal .menuMobile span{
+    .granbox main .section.inicio .wrap.intro{
         width: 100%;
-        height: 6px;
-        border-radius: 10px;
-        display: inline-block;
-        background-color: #0b4d53;
-        transition: .2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    .mobaAtivo span:nth-child(1){
-        transform: rotate(45deg) translateY(6px) translateX(-4px);
-        transition: .2s ease-in-out;
+    .granbox main .section.inicio .wrap.intro h1{
+        width: 100%;
+        text-align: center;
+        letter-spacing: 6px;
     }
-    .mobaAtivo span:nth-child(2){
-        opacity: 0;
-        transition: .1s ease-in-out;
+    .granbox main .section.inicio .wrap.intro h1,
+    .granbox main .section.inicio .wrap.intro h1 span{
+        color: var(--textocor);
+        font-size:3.4rem;
+        text-transform: uppercase;
         
     }
-    .mobaAtivo span:nth-child(3){
-        transform: rotate(-45deg) translateY(-21px) translateX(9px);
-        transition: .2s ease-in-out;
+    .granbox main .section.inicio .wrap.intro h1 span{
+        color: var(--textodestaque);
     }
-    .menu-principal img{
-        display: block !important;
-        width: 60px;
-        position: fixed;
-        top: 0px;
-        left: 0px;
+    .granbox main .section.inicio .wrap.intro p{
+        width: 100%;
+        text-align: center;
+        font-size: 1.6rem;
+        margin-top: 10px;
+        color: var(--textosub);
     }
-    section{
-        display: flex !important;
-        flex-direction: column;
-        height: auto !important;
-        margin-top: 0px;
-
+    .granbox main .section.inicio .wrap.intro a{
+        width: 280px;
+        height: 80px;
+        background-color:#178881;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        font-size: 1.4rem;
+        letter-spacing: 2px;
+        color:var(--corterciaria);
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+        margin-top: 20px;
     }
-    section.introducao .intro-img{
+    .granbox main .section.inicio .wrap.img-container{
         display: none;
     }
 
-
+    /* Sobre */
+    .granbox main .section.sobre{
+        height: 60vh;
+    }
+    .granbox main .section.sobre .wrap.content .section-title::after{
+        content: '';
+        width: 100px;
+        height: 5px;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+    }
     
-    
+    /* Serviços */
+    .granbox main .section.servicos .mySwiper{
+        padding:0;
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-wrapper .swiper-slide{
+        min-width: 450px;
+        height: 600px;
+        padding: 15px;
+    }
+    .swiper-wrapper .swiper-slide .card-slide{
+        width: 100%;
+    }
 
 
+    /* Contato */
+    .granbox main .section.contato{
+        height: 100vh;
+    }
+    .granbox main .section.contato .section-form{
+        height: 80%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .granbox main .section.contato .section-form .section-title{
+        width: 100%;
+        height: 60px;
+        padding: 60px;
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .granbox main .section.contato .section-form .section-title h2{
+        width: 100%;
+        font-size: 2rem;
+        position: relative;
+    }
+    .granbox main .section.contato .section-form .section-title h2::after{
+        bottom: -15px;
+    }
+    .granbox main .section.contato .section-form .formu{
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 60px;
+    }
+    .formu .row-formu{
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        gap: 10px;
+    }
+    .formu .row-formu label{
+        width: 100%;
+    }
+    .formu .row-formu.text{
+        width: 100%;
+    }
+    .formu .row-formu.text textarea{
+        height: 200px;
+    }
+    .formu .row-formu.text input[type="submit"]{
+        width: 200px;
+        height: 60px;
+        font-size: 24px;
+    }
+    .granbox main .section.contato .section-maps{
+        height: 40%;
+    }
 
+}
+
+@media (max-width: 550px) and (orientation: portrait){
+
+    .granbox header{
+        height: 60px !important;
+    }
+    .granbox header .centered figure{
+        display: flex;
+        width: 55px;
+        height: 55px;
+    }
+    .granbox header .centered nav .menu-mobile{
+        width: 40px;
+        height: 30px;
+        gap: 8px;
+    }
+    .granbox header .centered nav .menu-mobile span{
+        width: 100%;
+        height: 4px;
+    }
+    .granbox header .centered nav.ativo .menu-mobile span:nth-child(1){
+        transform: translateY(13px) rotate(45deg);
+        transition: ease-in-out 0.2s;
+    }
+    .granbox header .centered nav.ativo .menu-mobile span:nth-child(2){
+        /* transform: translateX(-200px); */
+        opacity: 0;
+        /* transition: ease-in-out 0.5s; */
+    }
+    .granbox header .centered nav.ativo .menu-mobile span:nth-child(3){
+        transform: translateY(-13px) rotate(-45deg);
+        transition: ease-in-out 0.2s;
+    }
+
+    /* Inicio */
+    .granbox main .section.inicio .wrap.intro h1{
+        width: 100%;
+        text-align: center;
+        letter-spacing: 6px;
+    }
+    .granbox main .section.inicio .wrap.intro h1,
+    .granbox main .section.inicio .wrap.intro h1 span{
+        font-size: 40px;
+        
+    }
+    .granbox main .section.inicio .wrap.intro h1 span{
+        color: var(--textodestaque);
+    }
+    .granbox main .section.inicio .wrap.intro p{
+
+        font-size: 20px;
+
+    }
+    .granbox main .section.inicio .wrap.intro a{
+        width: 180px;
+        height: 80px !important;
+        font-size: 20px;
+        padding: 10px;
+        letter-spacing: 0px;
+        color:var(--corterciaria);
+        margin-top: 10px;
+    }
+
+    /* Sobre */
+    .granbox main .section.sobre{
+        height: 90vh;
+        padding: 15px;
+    }
+    .granbox main .section.sobre .wrap.content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }   
+    .granbox main .section.sobre .wrap.content .section-title{
+        width: 100%;
+        position: relative;
+        font-size: 14px;
+    }
+    .granbox main .section.sobre .wrap.content .section-title::after{
+        content: '';
+        width: 100px;
+        height: 5px;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+    }
+    .section-contain p{
+        font-size: 1rem !important;
+        /* text-align: center; */
+    }
+
+    /* Serviços */
+    .granbox main .section.servicos .mySwiper{
+        padding:0;
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-wrapper .swiper-slide{
+        min-width: 350px;
+        height: 600px;
+        padding: 10px;
+    }
+    .swiper-wrapper .swiper-slide .card-slide{
+        width: 90%;
+        align-items: center;
+    }
+    .swiper-wrapper .swiper-slide .card-slide .img-card{
+        width: 100%;
+        height: 35%;
+    }
+    .swiper-wrapper .swiper-slide .card-slide h3{
+        margin-top: 10px;
+        font-weight: 600;
+    }
+    .swiper-wrapper .swiper-slide .card-slide p{
+        margin-top: -22px;
+        font-size: 16px;
+    }
+    .swiper-wrapper .swiper-slide .card-slide a{
+        font-size: 20px;
+        width: 150px;
+        height: 60px;
+        border-radius: 6px;
+    }
+
+    /* Contato */
+    .granbox main .section.contato .section-form{
+        height: 100%;
+        display: flex;
+        padding-top: 30px;
+        justify-content: flex-start;
+        flex-direction: column;
+        overflow: visible;
+    }
+    .granbox main .section.contato .section-form .section-title{
+        width: 100%;
+        height: 40px;
+        padding: 30px;
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .granbox main .section.contato .section-form .section-title h2{
+        width: 100%;
+        font-size: 1.2rem;
+        position: relative;
+    }
+    .granbox main .section.contato .section-form .section-title p{
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    .granbox main .section.contato .section-form .section-title h2::after{
+        bottom: -20px;
+        width: 80px;
+    }
+    .granbox main .section.contato .section-form .formu{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 30px;
+    }
+    .formu .row-formu{
+        width: 100%;
+        display: flex;
+        margin-top: 20px;
+        gap: 10px;
+    }
+    .formu .row-formu label{
+        width: 100%;
+        height: 50px;
+    }
+    .formu .row-formu.text{
+        width: 100%;
+    }
+    .formu .row-formu.text textarea{
+        height: 120px;
+        margin-top: 15px;
+    }
+    .formu .row-formu.text input[type="submit"]{
+        width: 140px;
+        height: 40px;
+        font-size: 24px;
+    }
+    .granbox main .section.contato .section-maps{
+        height: 40%;
+    }
+
+    /* footer */
+    .granbox footer.large-size{
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .granbox footer.large-size .centered{
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .granbox footer.large-size .centered ul{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+    .granbox footer.large-size .centered ul li{
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        border-radius: 100px;
+    }
+    .granbox footer.large-size .centered ul li a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .granbox footer.large-size .centered ul li a ion-icon{
+        width: 60%;
+        color: #11635e;
+    }
+    .granbox footer.large-size .centered p{
+        font-size: .8rem;
+        color: #fff;
+        text-align: center;
+    }
+    .granbox footer.large-size .centered div p{
+        border-top: solid 1px #96D4C9;
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    .granbox footer.large-size .centered div p,
+    .granbox footer.large-size .centered div p a{
+        font-size: .8rem;
+    } 
 
 }
