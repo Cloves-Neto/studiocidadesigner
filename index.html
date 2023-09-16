@@ -2,505 +2,405 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./src/favicon.ico" type="image/ico">
-    <title>Studio Cida Designer</title>
+    <title>Studio</title>
+    <link rel="shortcut icon" href="./src/logo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body>    
-    <!-- Container que limita o tamanho do conteúdo principal -->
-    <div class="container">
-
-        <header class="menu-principal">
-            <img src="./src/logo.png" alt="logo menu">
-            <!-- Icone de menu renderizado no mobile -->
-            <div class="menuMobile" id="divspan" onclick="menuMoba()"> 
-                <span></span>
-                <span></span>
-                <span></span>
+<body>
+    <!-- Cotainer que limita e redimensiona o tamanho do conteudo da pagina -->
+    <div class="granbox">
+        <!-- Header da página -->
+        <header class="large-size" id="cabecalho">
+            <!-- Ajusta o conteudo no centro -->
+            <div class="centered">
+                <!-- Logo da empresa -->
+                <figure>
+                    <img src="./src/logo.png" alt="Logo Studio">
+                    <figcaption>
+                        Logo Studio Cida Designer
+                    </figcaption>
+                </figure>
+                <!-- Menu de navegação -->
+                <nav class="menu-nav" id="menu-nav">
+                    <div class="menu-mobile" id="menu-mobile" onclick="menuClick()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- Lista de links do menu -->
+                    <ul class="menu-list">
+                        <li class="menu-item"><a class="menu-link" href="#inicio">Inicio</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#sobre">Sobre</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#servicos">Serviços</a></li>
+                        <li class="menu-item"><a class="menu-link" href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
             </div>
-
-            <!-- Navegacão menu -->
-            <nav class="navegacao-menu" id="menuMoba">    
-
-                <!-- Lista de links ancora -->
-                <ul aria-label="lista de acesso dos lnks do menu de navegação principal" class="lista-menu">
-
-                    <!-- Item-Link Inicio -->
-                    <li class="item-menu">
-                        <a href="#inicio" class="link-menu dt" data-scroll="inicio"> Inicio</a>
-                    </li>
-
-                    <!-- Item-Link Sobre -->
-                    <li class="item-menu">
-                        <a href="#sobre" class="link-menu dt" data-scroll="sobre"> Sobre nós</a>
-                    </li>
-
-                    <!-- Noticias -->
-                    <li class="item-menu">
-                        <a href="#noticia" class="link-menu dt" data-scroll="noticia"> Noticia</a>
-                    </li>
-
-                    <!-- Item-Link Serviços -->
-                    <li class="item-menu">
-                        <a href="#servicos" class="link-menu dt" data-scroll="servico"> Serviços</a>
-                    </li>
-
-                    <!-- Item-Link Profissionais -->
-                    <li class="item-menu">
-                        <a href="#profissionais" class="link-menu dt" data-scroll="profissionais"> Profissionais</a>
-                    </li>
-
-                    <!-- Item-Link Contato -->
-                    <li class="item-menu">
-                        <a href="#contato" class="link-menu dt" data-scroll="contato"> Contato</a>
-                    </li>
-
-                </ul>
-            </nav>
         </header>
 
-        <!-- Introdução do site | mensagem de boas vindas -->
-        <section class="introducao" id="inicio">
-            <div class="intro-info">
-                <h1>O melhor espaço <br> feito <span class="muda-cor">para você</span> </h1>
-                <p>
-                    Bem vindos aos Studio Cida Designer,
-                    aqui você encontra serviços estéticos
-                    pensados exclusivamente para trazer o
-                    melhor para seu bem estar e beleza. 
-                    Confira nossos procedimentos e agende
-                    sua experiência.
-                </p>
-                <a href="https://api.whatsapp.com/send?phone=5511952987437&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos,%20por%20favor." target="_blank" rel="">Fale Conosco</a>
-            </div>
-            <div class="intro-img">
-                <div class="container-img">
-                    <img src="./src/logo.png" alt="logo do studio">
-                </div>
-            </div>
-        </section>
-
-        <!-- Sessão resumo / apresentação-->
-        <section class="resumo" id="sobre">
-            <h1 class="titulo-sessao">Sobre nós</h1>
-            <div class="img-resumo">
-                <div class="img-container">img1</div>
-                <div class="img-container">img2</div>
-            </div>
-            <div class="texto-resumo">
-                <h2>Sobre o Studio:</h2>
-                <p>
-                    O Studio Cida Designer
-                    teve início a cerca de 20 anos onde foi
-                    iniciado como um salão de cabeleireiro e manicure.
-                    Por volta do ano de 2016, Maria Aparecida, 
-                    mais conhecida como 'Cida', se aperfeiçoou
-                    em designer de sobrancelhas e 
-                    e ingressou no ramo da micropigmentação,
-                    onde foi uma das pioneiras em micros fio a fio ,
-                    micro lábial, micro capilar e delineado dos olhos.
-                    Hoje atua nas áreas de estética facial e corporal
-                    e oferece mais de 20 tipos de   serviços.
-                </p>
-            </div>
-        </section>
-
-        <!-- Sessão de banner noticias -->
-        <section class="banner" id="noticia">
-            <!-- <h1 class="titulo-sessao"></h1> -->
-            <div id="carouselExampleInterval" class="carousel slide carousel-banner" data-bs-ride="carousel">
-                <!-- Container dos slides do carrossel -->
-                <div class="carousel-inner slide-content">
-                    <!-- slide 1 -->
-                    <div class="carousel-item active" data-bs-interval="5000">
-                        <div class="card-banner">
-                            <img src="./src/banner_ex.png" alt="">
-                        </div>
-                    </div>
-                    <!-- slide 2 -->
-                    <div class="carousel-item" data-bs-interval="5000">
-                        <div class="card-banner">
-                            painel 2
-                        </div>
-                    </div>
-                    <!-- slide 3 -->
-                    <div class="carousel-item">
-                        <div class="card-banner">
-                            painel 3
-                        </div>
-                    </div>
-                </div>
-                <!-- Botões prev e next -->
-
-                <!-- Prev -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <!-- Next -->
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </section>
-
-        <!-- Sessão de serviços e procedimentos -->
-        <section class="servicos" id="servicos">
-            <h1 class="titulo-sessao">Serviços</h1>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="card-slide">
-                            <div class="img-card"></div>
-                            <h3>Titulo procedimento</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet 
-                                consectetur adipisicing elit. 
-                                Tempora nisi autem, placeat 
-                                libero explicabo aspernatur 
-                                nobis et, mollitia officia 
-                                fugit sed error voluptatum.
-                            </p>
-                            <a href="#">VER+</a>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="card-slide">
-                            <div class="img-card"></div>
-                            <h3>Titulo procedimento</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet 
-                                consectetur adipisicing elit. 
-                                Tempora nisi autem, placeat 
-                                libero explicabo aspernatur 
-                                nobis et, mollitia officia 
-                                fugit sed error voluptatum.
-                            </p>
-                            <a href="#">VER+</a>
-                        </div>                  
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="card-slide">
-                            <div class="img-card"></div>
-                            <h3>Titulo procedimento</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet 
-                                consectetur adipisicing elit. 
-                                Tempora nisi autem, placeat 
-                                libero explicabo aspernatur 
-                                nobis et, mollitia officia 
-                                fugit sed error voluptatum.
-                            </p>
-                            <a href="#">VER+</a>
-                        </div>                  
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="card-slide">
-                            <div class="img-card"></div>
-                            <h3>Titulo procedimento</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet 
-                                consectetur adipisicing elit. 
-                                Tempora nisi autem, placeat 
-                                libero explicabo aspernatur 
-                                nobis et, mollitia officia 
-                                fugit sed error voluptatum.
-                            </p>
-                            <a href="#">VER+</a>
-                        </div>                 
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="card-slide">
-                            <div class="img-card"></div>
-                            <h3>Titulo procedimento</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet 
-                                consectetur adipisicing elit. 
-                                Tempora nisi autem, placeat 
-                                libero explicabo aspernatur 
-                                nobis et, mollitia officia 
-                                fugit sed error voluptatum.
-                            </p>
-                            <a href="#">VER+</a>
-                        </div>                  
-                    </div>
-                    </div>
-                <!-- <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div> -->
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-
-        <!-- Profissionais --> 
-        <section class="profissionais">
-            <h1 id="profissionais" class="titulo-sessao">Profissionais</h1>
-            <ul>
-                <li>
-                    <div class="img-perfil">
-                        <div class="img-container">
-                            <img src="./src/cida-perfil.png" alt="img perfil maria aparecida" class="img cida">
-                        </div>
-                    </div>
-                    <h2>Maria Aparecida</h2>
-                    <small>Micropigmentadora</small>
-                    <p> 
-                        Formou-se em micropigmentação em 2015 desde então,
-                        especializou-se em mais de 10 procedimentos todos
-                        com certificado no ramo da estética e beleza.
-                        Somando várias premiações neste período.
-                    </p>
-                    <div class="especialidades" style="margin-top: -20px;">
-                        <ol class="list-especialidades">
-                            <li>Remoção a laser de micropigmentação</li>
-                            <li>Remoção a laser de tatuagem</li>
-                            <li>Estética facial e corporal</li>
-                            <li>Velas Quentes</li>
-                            <li>Personal Bronze</li>
-                        </ol>
-                    </div>
-                </li>
+        <!-- Conteudo principal -->
+        <main>
+            <!-- Inicio 80vh height -->
+            <section class="section inicio" id="inicio">
                 
-                
-                <li>
-                    <div class="img-perfil">
-                        <div class="img-container">
-                            <img src="./src/jana-perfil.png" alt="img perfil janaina" class="img jana">
-                        </div>
-                    </div>
-                    <h2>Janaina Lima</h2>
-                    <small>Lash Designer e Massoterapeuta</small>
+                <!-- Introdução do site  -->
+                <div class="wrap intro">
+                    <h1>O melhor espaço feito <span>para você</span></h1>
                     <p>
-                        Formou-se em Lash Designer desde 2021, com mais de
-                        10 certificações na área, incluindo certificação 
-                        internacional pelo método shine e
-                        estilista de cílios pela Universidade dos cílios.
-                        Formou-se em massoterapeuta em 2022, especialista
-                        em massagem relaxante e ayurvédica.
+                        Bem vindos aos Studio Cida Designer, 
+                        aqui você encontra serviços estéticos pensados
+                        exclusivamente para trazer o melhor
+                        para seu bem estar e beleza. 
+                        Confira nossos procedimentos e agende sua experiência.
                     </p>
-                    <div class="especialidades">
-                        <ol class="list-especialidades">
-                            <li>Bambuterapia</li>
-                            <li>Candle</li>
-                            <li>Escalda Pés</li>
-                            <li>Velas Quentes</li>
-                            <li>Terapeuticas</li>
-                            <li>Aromaterapia</li>
-                            <li>Rituais SPA</li>
-                        </ol>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-        <!-- Sessão formulario para contato -->
-        <section id="contato" class="contato">
-            <h1 class="titulo-sessao">Contato</h1>
-
-            <!-- studiocidadesigner.contato@gmail.com  -->
-            <form class="form" method="post">
-                <div class="form-contain">
-                    <!-- <h2>Tire suas duvidas ou faça seu elogio</h2> -->
-                    <div class="row-form">
-                        <label for="nome">
-                            Nome
-                            <input id="nome" name="nome" type="text" placeholder="Digite seu nome ...">
-                        </label>
-
-                        <label for="email">
-                            Email
-                            <input id="email" name="email" type="email" placeholder="seuemail@email.com">
-                        </label>
-                    </div>
-                    <br>
-                    <div class="row-form">
-                        
-                        <label for="tel">
-                            Tel / Cel
-                            <input id="tel" name="tel" type="number" placeholder="(11) 98989-8989">
-                        </label>
-
-                        <label for="assunto">
-                            Assunto
-                            <!-- <input type="text"> -->
-                            <select name="assunto" id="assunto">
-                                <option value="">...</option>
-                                <option value="">Dúvida</option>
-                                <option value="">Elogio</option>
-                                <option value="">Outro</option>
-                            </select>
-                        </label>
-                    </div>
-                    <div class="row-form">
-                        <textarea name="texto" id="texto" rows="5" cols="28" placeholder="Digite aqui a sua mensagem ..."></textarea>
-                    </div>
-                    <br><br>
-
-                    <!-- <input type="button" value="Enviar"> -->
-                    <input type="submit" value="Enviar">
+                    <a href="https://api.whatsapp.com/send?phone=5511952987437&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos,%20por%20favor." target="_blank" >Fale conosco</a>
                 </div>
-            </form>
+                <!-- Imagem container -> Logo  -->
+                <div class="wrap img-container">
+                    <!-- <img src="" alt="Imagem de logo"> -->
+                </div>
+            </section>
 
-            <div class="map">
-                
-                <ul class="redes">
-                    <li>
-                        <a href="https://www.instagram.com/studiocida.designer/" target="_blank">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a>
-                    </li>
+            <!-- Banner 450px height -->
+            <section class="section banner" id="banner">
+                <div id="carouselExampleInterval" class="carousel slide carousel-banner" data-bs-ride="carousel">
+                    <!-- Container dos slides do carrossel -->
+                    <div class="carousel-inner slide-content">
+                        <!-- slide 1 -->
+                        <div class="carousel-item active" data-bs-interval="5000">
+                            <div class="card-banner">
+                                <picture>
+                                    <source media="(max-width: 500px)" srcset="src/bronze500x450.png" type="image/png">
+                                    <source media="(max-width: 780px)" srcset="src/bronze780x450.png" type="image/png">
+                                    <source media="(max-width: 1100px)" srcset="src/bronze1000x450.png" type="image/png">
+                                    <img src="./src/bronze1980x450.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
 
-                    <li>
-                        <a href="https://api.whatsapp.com/send?phone=5511952987437&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos,%20por%20favor." target="_blank" rel="">
-                            <ion-icon name="logo-whatsapp"></ion-icon>
-                        </a>
-                    </li>
+                        <!-- <div class="carousel-item" data-bs-interval="3000">
+                            
+                        </div>
 
-                    <li>
-                        <a href="https://m.facebook.com/studiocidadesigner/" target="_blank">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            
+                        </div> -->
+                    </div>
+                    <!-- Prev -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <!-- Next -->
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
 
-        <footer>
-            <ul class="redes">
-                <li>
-                    <a href="https://www.instagram.com/studiocida.designer/" target="_blank">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                </li>
+            <!-- Sobre -->
+            <section class="section sobre" id="sobre">
 
-                <li>
-                    <a href="https://api.whatsapp.com/send?phone=5511952987437&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos,%20por%20favor." target="_blank" rel="">
-                        <ion-icon name="logo-whatsapp"></ion-icon>
-                    </a>
-                </li>
+                <div class="wrap content">
+                    <div class="section-title">
+                        <h2>Sobre nós</h2>
+                    </div>
+                    <div class="section-contain">
+                        <p>
+                            O Studio Cida Designer
+                            teve início a cerca de 20 anos onde foi
+                            iniciado como um salão de cabeleireiro e manicure.
+                            Por volta do ano de 2016, Maria Aparecida, 
+                            mais conhecida como 'Cida', se aperfeiçoou
+                            em designer de sobrancelhas e 
+                            e ingressou no ramo da micropigmentação,
+                            onde foi uma das pioneiras em micros fio a fio ,
+                            micro lábial, micro capilar e delineado dos olhos.
+                            Hoje atua nas áreas de estética facial e corporal
+                            e oferece mais de 20 tipos de   serviços.
+                        </p>
+                    </div>                    
+                </div>
+                    
+                <!-- <div class="wrap image">
+                    <picture>
+                        <source media="(min-width: 500px)" srcset="" type="image/png">
+                        <source media="(min-width: 750px)" srcset="" type="image/png">
+                        <source media="(min-width: 1000px)" srcset="" type="image/png">
+                        <source media="(min-width: 1500px)" srcset="" type="image/png">
+                        <img src="" alt="">
+                    </picture>
+                </div> -->
 
-                <li>
-                    <a href="https://m.facebook.com/studiocidadesigner/" target="_blank">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                </li>
-            </ul>
-            <p>Studio Cida Designer <br> CNPJ 19.649.689/0001-08  <br> todos os direitos reservados, 2023 &copy;</p>
-            <small>Criado e Desenvolvildo por <br> <a href="#">Devneto | Cloves Neto</a></small>
-        </footer>
+            </section>
+
+            <!-- Serviços -->
+            <section class="section servicos" id="servicos">
+
+                <div class="section-title">
+                    <h2>Nossos Serviços</h2>
+                </div>
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="card-slide">
+                                <div class="img-card"></div>
+                                <h3>Titulo procedimento</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet 
+                                    consectetur adipisicing elit. 
+                                    Tempora nisi autem, placeat 
+                                    libero explicabo aspernatur 
+                                    nobis et, mollitia officia 
+                                    fugit sed error voluptatum.
+                                </p>
+                                <a href="https://api.whatsapp.com/send?phone=5511952987437&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos,%20por%20favor." target="_blank" >Mais +</a>
+                            </div>                  
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <div class="card-slide">
+                                <div class="img-card"></div>
+                                <h3>Titulo procedimento</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet 
+                                    consectetur adipisicing elit. 
+                                    Tempora nisi autem, placeat 
+                                    libero explicabo aspernatur 
+                                    nobis et, mollitia officia 
+                                    fugit sed error voluptatum.
+                                </p>
+                                <a href="https://api.whatsapp.com/send?phone=5511952987437&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos,%20por%20favor." target="_blank" >Mais +</a>
+                            </div>                 
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <div class="card-slide">
+                                <div class="img-card"></div>
+                                <h3>Titulo procedimento</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet 
+                                    consectetur adipisicing elit. 
+                                    Tempora nisi autem, placeat 
+                                    libero explicabo aspernatur 
+                                    nobis et, mollitia officia 
+                                    fugit sed error voluptatum.
+                                </p>
+                                <a href="https://api.whatsapp.com/send?phone=5511952987437&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos,%20por%20favor." target="_blank" >Mais +</a>
+                            </div>                  
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card-slide">
+                                <div class="img-card"></div>
+                                <h3>Titulo procedimento</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet 
+                                    consectetur adipisicing elit. 
+                                    Tempora nisi autem, placeat 
+                                    libero explicabo aspernatur 
+                                    nobis et, mollitia officia 
+                                    fugit sed error voluptatum.
+                                </p>
+                                <a href="https://api.whatsapp.com/send?phone=5511952987437&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos,%20por%20favor." target="_blank" >Mais +</a>
+                            </div>                 
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <div class="card-slide">
+                                <div class="img-card"></div>
+                                <h3>Titulo procedimento</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet 
+                                    consectetur adipisicing elit. 
+                                    Tempora nisi autem, placeat 
+                                    libero explicabo aspernatur 
+                                    nobis et, mollitia officia 
+                                    fugit sed error voluptatum.
+                                </p>
+                                <a href="https://api.whatsapp.com/send?phone=5511952987437&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos,%20por%20favor." target="_blank" >Mais +</a>
+                            </div>                  
+                        </div>
+                    </div>    
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!-- Contato -->
+            <section class="section contato" id="contato">
+
+                <div class="section-form">
+
+                        <div class="section-title">
+                            <h2>Entre em Contato</h2>
+                            <p>Entre em contato conosco. Estamos anciosos para ouvi-lo e ajuda-lo com suas necessidades.</p>
+                        </div>
+
+                        <form action="post" class="formu">
+    
+                            <div class="row-formu">
+                                <label for="nome">
+                                    Nome:
+                                    <input type="text" name="nome" id="nome" class="input">
+                                </label>
+                                <label for="email">
+                                    Email:
+                                    <input type="email" name="email" id="email" class="input">
+                                </label>
+                            </div>
+    
+                            <div class="row-formu">
+                                <label for="assunto">
+                                    Assunto:
+                                    <select name="assunto" id="assunto">
+                                        <option value="">...</option>
+                                        <option value="1">Dúvida</option>
+                                        <option value="2">Elogio</option>
+                                        <option value="3">Outros</option>
+                                    </select>
+                                </label>
+                                <label for="tel">
+                                    Tel:
+                                    <input type="tel" name="tel" id="tel" class="input">
+                                </label>
+                            </div>
+                            <div class="row-formu text">
+                                <textarea name="text" id="text" cols="30" rows="4"></textarea>
+                                <input type="submit" value="Enviar">
+                            </div>
+                        </form>
+                </div>
+
+                <div class="section-maps">
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.8402076521807!2d-46.55001338501931!3d-23.717399684605624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4180d8f9e9b1%3A0x373b773e746adbcd!2sStudio%20Cida%20Designer!5e0!3m2!1spt-BR!2sbr!4v1683712628660!5m2!1spt-BR!2sbr" 
+                    width="100%" 
+                    height="100%    " 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </section>
+
+            <!-- Rodapé da página -->
+            <footer class="large-size rodape" id="rodape">
+                <div class="centered">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="https://www.instagram.com/studiocida.designer/" target="_blank">
+                                    <ion-icon name="logo-instagram"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://m.facebook.com/studiocidadesigner/" target="_blank">
+                                    <ion-icon name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://api.whatsapp.com/send?phone=5511952987437&text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos,%20por%20favor." target="_blank" >
+                                    <ion-icon name="logo-whatsapp"></ion-icon>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <p>
+                        Studio Cida Designer <br>
+                        CNPJ 19.649.689/0001-08 <br>
+                        todos os direitos reservados, 2023 &copy;
+                    </p>
+                    
+                    <div>
+                        <p>
+                            Criado e Desenvolvido por <br>
+                            <a href="https://www.instagram.com/devneto_/" target="_blank" rel="noopener noreferrer">Devneto | Cloves Neto</a>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </main>
     </div>
 
-<!-- Bootstrap -->
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
 
-    <!-- Ion icons -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-<!-- Initialize Swiper -->
-<script aria-label="script swipper">
-  var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    centeredSlides: false,
-    slidesPerGroupSkip: 1,
-    grabCursor: true,
-    keyboard: {
-      enabled: true,
-    },
-    breakpoints: {
-      769: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-      },
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-
-  var swiper = new Swiper(".banner", {
-    slidesPerView: 1,
-    centeredSlides: false,
-    slidesPerGroupSkip: 1,
-    grabCursor: true,
-    keyboard: {
-      enabled: true,
-    },
-    breakpoints: {
-      769: {
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script aria-label="script swipper">
+    var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
-        slidesPerGroup: 1,
-      },
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-</script>
+        centeredSlides: false,
+        slidesPerGroupSkip: 1,
+        grabCursor: true,
+        keyboard: {
+        enabled: true,
+        },
+        breakpoints: {
+        769: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+        },
+        },
+        // scrollbar: {
+        // el: ".swiper-scrollbar",
+        // },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+    });
 
-<!-- Style Local -->
-<script>
+    // var swiper = new Swiper(".banner", {
+    //     slidesPerView: 1,
+    //     centeredSlides: false,
+    //     slidesPerGroupSkip: 1,
+    //     grabCursor: true,
+    //     keyboard: {
+    //     enabled: true,
+    //     },
+    //     breakpoints: {
+    //     769: {
+    //         slidesPerView: 1,
+    //         slidesPerGroup: 1,
+    //     },
+    //     },
+    //     scrollbar: {
+    //     el: ".swiper-scrollbar",
+    //     },
+    //     navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //     },
+    //     pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    //     },
+    // });
+    </script>
 
-    // Style referencia de sessão do menu
+    <!-- Ion-Icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
 
-    document.addEventListener('DOMContentLoaded', () => {
-
-        window.addEventListener("scroll", menuAtivo);
-
-        function menuAtivo(){
-            let sections = document.querySelectorAll('section');
-            
-            let navLinks = document.querySelectorAll('.dt');
-
-            let len = sections.length;
-            while(--len && window.scrollY + 97 < sections[len].offsetTop){}
-            navLinks.forEach(nvl => nvl.classList.remove('ativo'));
-            navLinks[len].classList.add('ativo');
-        }
-        menuAtivo();
-    })
-
-    // obseva scroll e fecha menu
-
-    let headernav = document.getElementById('menuMoba');
-    let divspan = document.getElementById('divspan');
-    
-    function menuMoba(){
-        headernav.classList.toggle('menuMoba');
-        divspan.classList.toggle('mobaAtivo');
-    }
-    
-    window.addEventListener('scroll', ()=>{
-        headernav.classList.remove('menuMoba');
-        divspan.classList.remove('mobaAtivo');
-    })
-
-</script>
+    <!-- Meu script -->
+    <script src="./script.js"></script>
 </body>
 </html>

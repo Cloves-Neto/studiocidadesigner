@@ -220,7 +220,7 @@ body{
 .granbox main .section.inicio .wrap.img-container{
     width: 50%;
     right: 0;
-    background-image: url(./src/studio.jpg);
+    background-image: url(./src/logo.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 100% 100%;
