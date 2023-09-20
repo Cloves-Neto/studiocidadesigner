@@ -345,13 +345,23 @@ body{
     height: 40%;
     
     background-color: #96D4C9;
+    border: solid 3px #178881;
 }
+.swiper-wrapper .swiper-slide .card-slide .img-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .swiper-wrapper .swiper-slide .card-slide h3{
     width: 100%;
     height: 10%;
     
     margin-top: 20px;
-    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: #11635e;
 }
 .swiper-wrapper .swiper-slide .card-slide p{
     width: 100%;
